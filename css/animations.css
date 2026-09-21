@@ -1,0 +1,430 @@
+/* =========================================
+   SAVORÉ — PREMIUM ANIMATIONS
+   ========================================= */
+
+/* ---------- HERO ---------- */
+
+.hero-content {
+    animation: heroContent 1s ease forwards;
+}
+
+.chef-special {
+    animation: floatingCard 4s ease-in-out infinite;
+}
+
+@keyframes heroContent {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatingCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ---------- SCROLL REVEAL ---------- */
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------- STAGGERED REVEAL ---------- */
+
+.why-card:nth-child(2),
+.food-card:nth-child(2),
+.review-card:nth-child(2) {
+    transition-delay: 0.08s;
+}
+
+.why-card:nth-child(3),
+.food-card:nth-child(3),
+.review-card:nth-child(3) {
+    transition-delay: 0.16s;
+}
+
+.why-card:nth-child(4),
+.food-card:nth-child(4) {
+    transition-delay: 0.24s;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+    box-shadow:
+        0 12px 30px rgba(217, 173, 91, 0.25);
+}
+
+.btn-outline:hover {
+    box-shadow:
+        0 12px 30px rgba(217, 173, 91, 0.12);
+}
+
+
+/* Button shine */
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.18),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.btn:hover::after {
+    left: 140%;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        height 0.35s ease;
+}
+
+.navbar.scrolled {
+    box-shadow:
+        0 8px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+.nav-links a {
+    position: relative;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a:not(.nav-reserve)::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 5px;
+
+    height: 1px;
+    background: #d9ad5b;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:not(.nav-reserve):hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* ---------- FOOD CARDS ---------- */
+
+.food-card {
+    transition:
+        opacity 0.4s ease,
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.food-image {
+    overflow: hidden;
+}
+
+.food-image img {
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.07);
+}
+
+
+/* ---------- WHY CARDS ---------- */
+
+.why-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.why-icon {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.why-card:hover .why-icon {
+    transform: rotate(8deg) scale(1.08);
+    background: rgba(217, 173, 91, 0.08);
+}
+
+
+/* ---------- GALLERY ---------- */
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.75);
+}
+
+.gallery-overlay {
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* ---------- REVIEWS ---------- */
+
+.review-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.user-avatar {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.review-card:hover .user-avatar {
+    transform: scale(1.08);
+}
+
+
+/* ---------- CHEF IMAGE ---------- */
+
+.chef-image {
+    overflow: visible;
+}
+
+.chef-image img {
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.chef-image:hover img {
+    transform: scale(1.015);
+    filter: brightness(1.05);
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact-item {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.08);
+}
+
+
+/* ---------- SOCIAL LINKS ---------- */
+
+.social-links a,
+.footer-social a {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.social-links a:hover,
+.footer-social a:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ---------- FOOTER LINKS ---------- */
+
+.footer-column a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-column a:hover {
+    transform: translateX(4px);
+}
+
+
+/* ---------- MODAL ---------- */
+
+.food-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.food-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.food-modal-content {
+    transform: translateY(25px) scale(0.98);
+    transition:
+        transform 0.4s ease;
+}
+
+.food-modal.show .food-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* ---------- FILTER BUTTONS ---------- */
+
+.filter-btn {
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.25s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .food-card:hover,
+    .why-card:hover,
+    .review-card:hover {
+        transform: none;
+    }
+
+    .gallery-item:hover img {
+        transform: none;
+        filter: none;
+    }
+
+    .contact-item:hover {
+        transform: none;
+    }
+}
+
+
+/* ---------- ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}

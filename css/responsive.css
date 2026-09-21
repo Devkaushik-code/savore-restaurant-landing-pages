@@ -1,0 +1,741 @@
+/* =========================================
+   SAVORÉ — RESPONSIVE / MOBILE POLISH
+   ========================================= */
+
+/* ---------- TABLET / SMALL LAPTOP ---------- */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(52px, 7vw, 78px);
+    }
+
+    .chef-special {
+        right: 4%;
+    }
+
+    .section-padding {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .about-container,
+    .chef-container,
+    .reservation-container,
+    .contact-container {
+        gap: 55px;
+    }
+
+    .gallery-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 72px;
+        padding: 0 5%;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(217, 173, 91, 0.35);
+        background: rgba(20, 20, 20, 0.8);
+        color: #f5f0e8;
+        font-size: 22px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 25px 5% 30px;
+
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border-top: 1px solid rgba(217, 173, 91, 0.15);
+        border-bottom: 1px solid #252525;
+
+        gap: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 13px 10px;
+        font-size: 15px;
+    }
+
+    .nav-links a:not(.nav-reserve):hover {
+        background: rgba(217, 173, 91, 0.08);
+    }
+
+    .nav-reserve {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+        padding: 120px 7% 70px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 10vw, 72px);
+        line-height: 1.02;
+    }
+
+    .hero-content > p {
+        max-width: 550px;
+    }
+
+    .hero-buttons {
+        margin-top: 30px;
+    }
+
+    .chef-special {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 50px;
+        width: 300px;
+    }
+
+
+    /* COMMON */
+
+    .section-padding {
+        padding: 90px 6%;
+    }
+
+    .section-heading {
+        max-width: 700px;
+    }
+
+
+    /* ABOUT */
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-image img {
+        height: 500px;
+    }
+
+    .about-badge {
+        right: 20px;
+    }
+
+
+    /* STATS */
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .stat {
+        border-right: none;
+    }
+
+
+    /* MENU */
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* WHY CHOOSE US */
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* CHEF */
+
+    .chef-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .chef-content {
+        max-width: 100%;
+    }
+
+    .chef-image img {
+        height: 500px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 240px;
+    }
+
+    .gallery-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .gallery-wide {
+        grid-column: span 2;
+    }
+
+
+    /* REVIEWS */
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-card:last-child {
+        grid-column: span 2;
+    }
+
+
+    /* RESERVATION */
+
+    .reservation-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .reservation-content {
+        max-width: 100%;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .location-card {
+        min-height: 450px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 35px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* GLOBAL */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .section-padding {
+        padding: 75px 6%;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 68px;
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+
+    .nav-links {
+        top: 68px;
+        padding: 20px 6% 25px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+        padding: 105px 6% 50px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero h1 {
+        margin-top: 15px;
+        font-size: 48px;
+        line-height: 1.03;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 95%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .chef-special {
+        width: 100%;
+        max-width: 280px;
+        margin-top: 40px;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .section-heading h2 {
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* ABOUT */
+
+    .about-container {
+        gap: 45px;
+    }
+
+    .about-image img {
+        height: 420px;
+    }
+
+    .about-badge {
+        width: 120px;
+        height: 120px;
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .about-badge strong {
+        font-size: 32px;
+    }
+
+    .about-badge span {
+        font-size: 9px;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+    }
+
+
+    /* STATS */
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 70px;
+        padding-top: 40px;
+        gap: 40px 10px;
+    }
+
+    .stat strong {
+        font-size: 36px;
+    }
+
+    .stat span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+
+    /* MENU */
+
+    .menu-filters {
+        gap: 7px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 10px 14px;
+        font-size: 11px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food-image {
+        height: 270px;
+    }
+
+    .food-card {
+        width: 100%;
+    }
+
+
+    /* FOOD MODAL */
+
+    .food-modal {
+        padding: 15px;
+    }
+
+    .food-modal-content {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .food-modal-content > img {
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .modal-info {
+        padding: 35px 25px;
+    }
+
+    .modal-info h2 {
+        font-size: 35px;
+    }
+
+    .modal-info .btn {
+        width: 100%;
+    }
+
+
+    /* WHY CHOOSE US */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 45px;
+    }
+
+    .why-card {
+        padding: 30px 22px;
+    }
+
+
+    /* CHEF */
+
+    .chef-container {
+        gap: 45px;
+    }
+
+    .chef-image img {
+        height: 420px;
+    }
+
+    .chef-image::after {
+        left: 10px;
+        bottom: -10px;
+    }
+
+    .chef-content h2 {
+        font-size: 40px;
+    }
+
+    .chef-content blockquote {
+        font-size: 17px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+        gap: 15px;
+    }
+
+    .gallery-large,
+    .gallery-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        padding: 20px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 21px;
+    }
+
+
+    /* REVIEWS */
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card:last-child {
+        grid-column: span 1;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+
+    .review-summary {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .summary-divider {
+        width: 60px;
+        height: 1px;
+    }
+
+
+    /* RESERVATION */
+
+    .reservation-container {
+        gap: 45px;
+    }
+
+    .reservation-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .reservation-content h2 {
+        font-size: 40px;
+    }
+
+    .reservation-btn {
+        width: 100%;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        gap: 40px;
+    }
+
+    .location-card {
+        min-height: 380px;
+    }
+
+    .directions-btn {
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        text-align: center;
+    }
+
+    .contact-item {
+        padding: 20px 0;
+    }
+
+    .contact-item h3 {
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 60px;
+    }
+
+    .footer-brand > p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .footer-bottom div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        min-width: 0;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .about-content h2,
+    .chef-content h2,
+    .reservation-content h2 {
+        font-size: 36px;
+    }
+
+    .about-image img,
+    .chef-image img {
+        height: 360px;
+    }
+
+    .stats-container {
+        gap: 30px 5px;
+    }
+
+    .stat strong {
+        font-size: 30px;
+    }
+
+    .stat span {
+        font-size: 8px;
+    }
+
+    .food-image {
+        height: 240px;
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 230px;
+    }
+}
+
+
+/* =========================================
+   TOUCH DEVICE IMPROVEMENTS
+   ========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .food-card:hover,
+    .why-card:hover,
+    .review-card:hover {
+        transform: none;
+    }
+
+    .gallery-item:hover img {
+        transform: none;
+    }
+
+    .btn,
+    .filter-btn,
+    .nav-links a,
+    .menu-toggle {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
